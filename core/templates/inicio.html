@@ -140,12 +140,12 @@
     <div class="container-fluid bg-grey">
         <nav class="navbar">
             <ul class="nav navbar-nav">
-                <li><a href="#sobre">SOBRE</a></li>
-                <li><a href="#consulta">CONSULTA</a></li>
-                <li><a href="#locais">LOCAIS</a></li>
-                <li><a href="#mapa">MAPA</a></li>
-                <li><a href="#horario">HORÁRIO</a></li>
-                <li><a href="/login">ÁREA RESTRITA</a></li>
+                <li><a href="#sobre" aria-label="Ir para seção de descrição sobre ecoponto">SOBRE</a></li>
+                <li><a href="#consulta" aria-label="Ir para seção de consulta de descarte nos ecopontos">CONSULTA</a></li>
+                <li><a href="#locais" aria-label="Ir para seção de descrição das localizações dos ecopontos">LOCAIS</a></li>
+                <li><a href="#mapa" aria-label="Ir para seção de mapeamento dos ecopontos">MAPA</a></li>
+                <li><a href="#horario" aria-label="Ir para seção de descrição dos horários de funcionamento">HORÁRIO</a></li>
+                <li><a href="/login" aria-label="Ir para o login de funcionários">ÁREA RESTRITA</a></li>
             </ul>
         </nav>
     </div>
@@ -162,7 +162,7 @@
                     entulho deve ser separado pelo gerador sob orientação do funcionário do local.</p>
             </div>
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-refresh logo"></span>
+                <span class="glyphicon glyphicon-refresh logo" alt="Imagem circular de reciclagem"></span>
             </div>
         </div>
     </div>
@@ -171,13 +171,13 @@
         <h2>O que posso descartar?</h2><br>
         <div class="container-fluid-grid bg-grey">
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-thumbs-up logo-small"></span>
+                <span class="glyphicon glyphicon-thumbs-up logo-small" alt="Imagem de uma mão verde com polegar levantado, fazendo sinal positivo" title="positivo"></span>
                 <h4><strong>Pode descartar</strong> Pequenas quantidades de entulho (até 1m³ a cada 120 dias),
                     Madeira,
                     Plástico, Metal, Vidro, Papel e Papelão, Móveis e Eletrodomésticos..</h4><br>
             </div>
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-thumbs-down logo-small-red"></span>
+                <span class="glyphicon glyphicon-thumbs-down logo-small-red" alt="Imagem de uma mão virada para baixo vermelha com polegar levantado, fazendo sinal negativo" title="negativo"></span>
                 <h4><strong>Não pode descartar</strong> Grandes quantidades de entulho de construção (mais de 1m³),
                     Lixo
                     doméstico, Lixo hospitalar ou de serviços de saúde (dentistas, clínicas veterinárias, clínicas
@@ -195,10 +195,10 @@
         <br>
         <form>
             {% csrf_token %}
-            <div id="input-documento" class="input-group">
-                <input type="cpf" class="form-control" placeholder="CPF" required>
+            <div id="input-documento" aria-label="Insira nesse campo o documento CPF" class="input-group">
+                <input type="cpf" aria-describedby="busca-por-cpf" class="form-control" placeholder="CPF">
                 <div class="input-group-btn">
-                    <button onclick="exibirMensagemAlerta()" type="button" class="btn btn-primary">Procurar</button>
+                    <button onclick="exibirMensagemAlerta()" type="button" class="btn btn-primary" aria-label="Realizar Busca com o documento">Procurar</button>
                 </div>
             </div>
         </form>
@@ -235,7 +235,7 @@
                 <br/>
                 <small>Para visualizar em um mapa maior <b><a
                         href="https://maps.google.com.br/maps/ms?msid=213452230549172689477.0004c7619e0e874227f19&msa=0&ll=-22.311649,-49.072838&spn=0.110214,0.181789"
-                        class="external-link">Ecopontos - Bauru/SP</a></b></small>
+                        class="external-link" title="Mapa da cidade de Bauru com a localização dos ecopontos em destaque">Ecopontos - Bauru/SP</a></b></small>
             </div>
         </div>
     </div>
@@ -248,7 +248,7 @@
 
     <div id="footer" class="container-fluid text-center">
         <footer>
-            <h4>Página criada pelo grupo BAURU-PJI110.</h4>
+            <h4>Página criada pelo grupo BAURU-PJI240.</h4>
             <h4>Usado como referencia o site da Prefeitura Municipal de Bauru : <a
                     href="https://www2.bauru.sp.gov.br/semma/ecoponto.aspx"
                     title="Ecoponto">Ecoponto Bauru</a>
